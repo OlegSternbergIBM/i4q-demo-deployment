@@ -20,7 +20,7 @@ spec:
         - containerPort: 8080
         volumeMounts:
         - mountPath: /upload
-          name: shared-volume-image        
+          name: shared-volume-picture        
 #        command: ['sh', '-c', 'python', 'http_server.py', '../upload']
       - name: i4q-demo-app
         image: quay.io/osternbe/i4q-demo-app:latest
@@ -29,8 +29,8 @@ spec:
         volumeMounts:
         - mountPath: /model
           name: shared-volume-model
-        - mountPath: /images
-          name: shared-volume-image          
+        - mountPath: /pictures
+          name: shared-volume-picture          
       initContainers:  
       - name: i4q-demo-model
         image: quay.io/osternbe/i4q-demo-model:latest
@@ -42,5 +42,5 @@ spec:
       volumes:
         - name: shared-volume-model
           emptyDir: {}
-        - name: shared-volume-image
-          emptyDir: {}          
+        - name: shared-volume-picture
+          emptyDir: {}
