@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: i4q-demo-deployment
+  name: i4q-demo-deployment-12345
 spec:
   selector:
     matchLabels:
